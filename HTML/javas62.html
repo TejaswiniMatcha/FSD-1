@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Output Methods</title>
+
+    <script>
+        function showOutputs() {
+            document.getElementById("output").innerHTML ="Output using innerHTML";
+            document.write("Output using document.write()<br>");
+            alert("Output using alert box");
+            console.log("Output using console.log()");
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>JavaScript Output Methods Demo</h2>
+
+<button onclick="showOutputs()">Click to Display Outputs</button>
+
+<p id="output"></p>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Demo</title>
+
+    <script>
+        function changeContent()
+        {
+            // Using document property
+            document.title = "Document Object Model Example";
+
+            // Using document method
+            document.getElementById("msg").innerHTML = "Content Changed Successfully!";
+
+            // Using body property
+            document.body.style.backgroundColor = "purple";
+
+            // Creating a new element dynamically
+            var newPara = document.createElement("p");
+            newPara.innerHTML = "This paragraph is created using createElement() method.";
+
+            // Adding it to body
+            document.body.appendChild(newPara);
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Document Object Properties and Methods</h2>
+
+<p id="msg">Click the button to change content</p>
+
+<button onclick="changeContent()">Click Here</button>
+
+</body>
+</html>
