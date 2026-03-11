@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Number Operations</h3>
+
+Enter Number:
+<input type="number" id="num"><br><br>
+
+<button onclick="fact()">Factorial</button>
+<button onclick="fib()">Fibonacci</button>
+<button onclick="prime()">Prime</button>
+<button onclick="pal()">Palindrome</button>
+
+<p id="result"></p>
+
+<script>
+
+function fact(){
+ let n=document.getElementById("num").value,f=1;
+ for(let i=1;i<=n;i++) f*=i;
+ document.getElementById("result").innerHTML="Factorial: "+f;
+}
+
+function fib(){
+ let n=document.getElementById("num").value,a=0,b=1,s="0 1 ";
+ for(let i=2;i<n;i++){
+  let c=a+b;
+  s+=c+" ";
+  a=b; b=c;
+ }
+ document.getElementById("result").innerHTML="Fibonacci: "+s;
+}
+
+function prime(){
+ let n=document.getElementById("num").value,p="";
+ for(let i=2;i<=n;i++){
+  let flag=1;
+  for(let j=2;j<i;j++)
+   if(i%j==0) flag=0;
+  if(flag) p+=i+" ";
+ }
+ document.getElementById("result").innerHTML="Primes: "+p;
+}
+
+function pal(){
+ let n=document.getElementById("num").value,r=0,t=n;
+ while(t>0){
+  r=r*10+t%10;
+  t=Math.floor(t/10);
+ }
+ if(r==n)
+  document.getElementById("result").innerHTML="Palindrome";
+ else
+  document.getElementById("result").innerHTML="Not Palindrome";
+}
+
+</script>
+
+</body>
+</html>

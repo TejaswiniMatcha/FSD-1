@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Registration Form</h3>
+
+Name: <input type="text" id="name"><br><br>
+Mobile: <input type="text" id="mobile"><br><br>
+Email: <input type="text" id="email"><br><br>
+
+<button onclick="validate()">Submit</button>
+
+<p id="msg"></p>
+
+<script>
+function validate(){
+
+ let name=document.getElementById("name").value;
+ let mobile=document.getElementById("mobile").value;
+ let email=document.getElementById("email").value;
+
+ let namePattern=/^[A-Za-z][A-Za-z0-9]{5,}$/;
+ let mobilePattern=/^[0-9]{10}$/;
+ let emailPattern=/^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+
+ if(!namePattern.test(name))
+  document.getElementById("msg").innerHTML="Invalid Name";
+ else if(!mobilePattern.test(mobile))
+  document.getElementById("msg").innerHTML="Invalid Mobile Number";
+ else if(!emailPattern.test(email))
+  document.getElementById("msg").innerHTML="Invalid Email";
+ else
+  document.getElementById("msg").innerHTML="Registration Successful";
+
+}
+</script>
+
+</body>
+</html>

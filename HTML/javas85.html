@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong Number Program</title>
+</head>
+<body>
+
+<h2>Check Armstrong Number</h2>
+
+<script>
+    // Get number from user
+    var num = parseInt(prompt("Enter a number:"));
+    var temp = num;
+    var sum = 0;
+    var digit;
+
+    // Calculate sum of cubes of digits
+    while (temp > 0) {
+        digit = temp % 10;
+        sum = sum + (digit * digit * digit);
+        temp = Math.floor(temp / 10);
+    }
+
+    // Check Armstrong condition
+    if (sum == num) {
+        alert(num + " is an ARMSTRONG NUMBER");
+    } else {
+        alert(num + " is NOT an ARMSTRONG NUMBER");
+    }
+</script>
+
+</body>
+</html

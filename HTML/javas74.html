@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Object Example</title>
+</head>
+<body>
+
+<h2>JavaScript Math Object Example</h2>
+
+<button onclick="showMath()">Show Math Results</button>
+
+<p id="result"></p>
+
+<script>
+function showMath() {
+    var num = 25;
+
+    var piValue = Math.PI;          // Math property
+    var squareRoot = Math.sqrt(num); // Square root
+    var power = Math.pow(2, 3);      // 2^3
+    var roundVal = Math.round(4.6);  // Round
+    var ceilVal = Math.ceil(4.2);    // Ceiling
+    var floorVal = Math.floor(4.8);  // Floor
+
+    document.getElementById("result").innerHTML =
+        "Value of PI: " + piValue + "<br>" +
+        "Square root of 25: " + squareRoot + "<br>" +
+        "2 raised to power 3: " + power + "<br>" +
+        "Round of 4.6: " + roundVal + "<br>" +
+        "Ceil of 4.2: " + ceilVal + "<br>" +
+        "Floor of 4.8: " + floorVal;
+}
+</script>
+
+</body>
+</html>
