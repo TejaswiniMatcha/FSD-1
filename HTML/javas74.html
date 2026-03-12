@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Math Object Demo</title>
+    <style>
+        body {
+            font-family: cursive;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .result {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            margin-top: 10px;
+        }
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Math Object Example</h1>
+    <div class="result" id="output"></div>
+
+    <script>
+        try {
+            let output = "";
+
+            // Math object properties
+            output += `<strong>Math.PI:</strong> ${Math.PI}<br>`;
+            output += `<strong>Math.E:</strong> ${Math.E}<br>`;
+
+            // Math methods
+            output += `<strong>Square root of 625:</strong> ${Math.sqrt(625)}<br>`;
+            output += `<strong>5 raised to power 10:</strong> ${Math.pow(5, 10)}<br>`;
+            output += `<strong>Random number (0 to 1):</strong> ${Math.random()}<br>`;
+            output += `<strong>Random integer (1 to 10):</strong> ${Math.floor(Math.random() * 10) + 1}<br>`;
+            output += `<strong>Floor of 66.7:</strong> ${Math.floor(4.7)}<br>`;
+            output += `<strong>Ceil of 66.2:</strong> ${Math.ceil(4.2)}<br>`;
+            output += `<strong>Round 14.5:</strong> ${Math.round(4.5)}<br>`;
+            output += `<strong>Max of (14,23,66):</strong> ${Math.max(14,23,66)}<br>`;
+            output += `<strong>Min of (8,14,23):</strong> ${Math.min(8,14,23)}<br>`;
+
+            // Display results
+            document.getElementById("output").innerHTML = output;
+        } catch (error) {
+            document.getElementById("output").innerHTML = `<span style="color:purple;">Error: ${error.message}</span>`;
+        }
+    </script>
+
+</body>
+</html>

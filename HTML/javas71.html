@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Properties and Methods</title>
+    <style>
+        body {
+            font-family: cursive;
+            
+        }
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Welcome to DOM Demo</h1>
+    <p id="description">This paragraph will be changed using Document Object methods.</p>
+
+    <button onclick="changeContent()">Change Content</button>
+    <button onclick="showDocumentInfo()">Show Document Info</button>
+
+    <div id="output"></div>
+
+    <script>
+        function changeContent() {
+            document.getElementById("description").innerHTML = "The content has been updated dynamically!";
+            document.getElementById("description").style.color = "midnightblue";
+            document.getElementById("description").style.fontWeight = "bold";
+        }
+        function showDocumentInfo() {
+            let info = `
+                <strong>Document Title:</strong> ${document.title} <br>
+                <strong>URL:</strong> ${document.URL} <br>
+                <strong>Last Modified:</strong> ${document.lastModified} <br>
+                <strong>Total Elements:</strong> ${document.getElementsByTagName('*').length}
+            `;
+            document.getElementById("output").innerHTML = info;
+        }
+    </script>
+
+</body>
+</html>

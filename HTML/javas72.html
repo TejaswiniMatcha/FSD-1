@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>JavaScript Window Object Demo</h2>
+
+<button onclick="showAlert()">Alert</button>
+<button onclick="showConfirm()">Confirm</button>
+<button onclick="showPrompt()">Prompt</button>
+<button onclick="showWindowSize()">Window Size</button>
+<button onclick="startTimer()">Start Timer</button>
+<button onclick="stopTimer()">Stop Timer</button>
+
+<p id="output"></p>
+
+<script>
+    let timerId = null;
+
+    function showAlert() {
+        window.alert("Hey guys....");
+    }
+    function showConfirm() {
+        let result = window.confirm("Have you watched Frozen 2 disney movie?");
+        document.getElementById("output").innerText = 
+            result ? "Yep!!! It's lovely right???" : "It's okkk!Watch it in your free time..It's an incredible movie.";
+    }
+    function showPrompt() {
+        let name = window.prompt("Enter your name:", "");
+        if (name !== null && name.trim() !== "") {
+            document.getElementById("output").innerText = `Heyylloo, ${name}!`;
+        } else {
+            document.getElementById("output").innerText = "No name entered.";
+        }
+    }
+    function showWindowSize() {
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        document.getElementById("output").innerText = 
+            `Window size: ${width} x ${height} pixels`;
+    }
+
+    function startTimer() {
+        if (timerId !== null) {
+            window.alert("Your clock is ticking.");
+            return;
+        }
+        timerId = window.setInterval(() => {
+            let now = new Date();
+            document.getElementById("output").innerText = 
+                `Current time: ${now.toLocaleTimeString()}`;
+        }, 1000);
+    }
+
+    function stopTimer() {
+        if (timerId !== null) {
+            window.clearInterval(timerId);
+            timerId = null;
+            document.getElementById("output").innerText = "Timer stopped.";
+        } else {
+            window.alert("Your clock doesn't work.");
+        }
+    }
+</script>
+
+</body>
+</html>

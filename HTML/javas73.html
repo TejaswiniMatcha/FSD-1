@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Array Object Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        button { margin: 5px; padding: 8px 12px; }
+        #output { margin-top: 15px; padding: 10px; border: 1px solid #ccc; background: #f9f9f9; }
+    </style>
+</head>
+<body>
+
+<h2>Array Object Properties & Methods</h2>
+
+<p>Initial Array: <span id="initial"></span></p>
+
+<button onclick="addElement()">Push (Add at End)</button>
+<button onclick="removeLast()">Pop (Remove Last)</button>
+<button onclick="removeFirst()">Shift (Remove First)</button>
+<button onclick="addFirst()">Unshift (Add at Start)</button>
+<button onclick="sortArray()">Sort</button>
+<button onclick="reverseArray()">Reverse</button>
+<button onclick="joinArray()">Join with '-'</button>
+
+<div id="output"></div>
+
+<script>
+    let numbers = [1,2,3,4,5];
+    document.getElementById("initial").textContent = numbers.join(", ");
+    displayArray();
+
+ 
+    function displayArray() {
+        document.getElementById("output").innerHTML =
+            `<strong>Array:</strong> [${numbers.join(", ")}] <br>` +
+            `<strong>Length:</strong> ${numbers.length}`;
+    }
+
+    function addElement() {
+        numbers.push(6); 
+        displayArray();
+    }
+
+    function removeLast() {
+        if (numbers.length > 0) {
+            numbers.pop();         }
+        displayArray();
+    }
+
+    function removeFirst() {
+        if (numbers.length > 0) {
+            numbers.shift(); 
+        }
+        displayArray();
+    }
+
+    function addFirst() {
+        numbers.unshift(7); 
+        displayArray();
+    }
+
+    function sortArray() {
+        numbers.sort(); 
+        displayArray();
+    }
+
+    function reverseArray() {
+        numbers.reverse(); 
+        displayArray();
+    }
+
+    function joinArray() {
+        alert("Joined String: " + numbers.join(" - ")); // Joins with '-'
+    }
+</script>
+
+</body>
+</html>
