@@ -5,10 +5,12 @@
 
     <script>
         function checkVoter() {
+
+            // Take input using prompt
             let name = prompt("Enter your name:");
             let age = parseInt(prompt("Enter your age:"));
 
-            
+            // Check eligibility
             let status;
             if (age >= 18) {
                 status = "Eligible to Vote";
@@ -16,7 +18,7 @@
                 status = "Not Eligible to Vote";
             }
 
-            
+            // Display in table
             document.getElementById("name").innerHTML = name;
             document.getElementById("age").innerHTML = age;
             document.getElementById("status").innerHTML = status;
