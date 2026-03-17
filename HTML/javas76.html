@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RegExp Object Example</title>
+</head>
+<body>
+
+<h2>RegExp Object Properties and Methods</h2>
+
+<label>Enter a string:</label>
+<input type="text" id="textInput">
+<button onclick="checkRegex()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function checkRegex()
+{
+    
+    var pattern = new RegExp("^[A-Za-z]+$","g");
+
+    
+    var str = document.getElementById("textInput").value;
+
+   
+    var match = pattern.test(str);
+
+    // Display properties
+    var output = "Input String: " + str + "<br>";
+    output += "Global Property: " + pattern.global + "<br>";
+    output += "Ignore Case Property: " + pattern.ignoreCase + "<br>";
+    output += "Multiline Property: " + pattern.multiline + "<br><br>";
+
+    // Display result using test() method
+    if(match)
+        output += "Result: String contains only alphabets.";
+    else
+        output += "Result: String contains other characters.";
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+
+</body>
+</html>

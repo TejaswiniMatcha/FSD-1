@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Properties and Methods</title>
+</head>
+<body>
+    <h2>String Manipulator</h2>
+    <p>Enter some text into the input field below to see how string properties and methods work:</p>
+
+    <input type="text" id="stringInput" value="Hello World">
+    <button onclick="manipulateString()">Manipulate String</button>
+
+    <h3>Results:</h3>
+    <ul>
+        <li id="length"></li>
+        <li id="uppercase"></li>
+        <li id="lowercase"></li>
+        <li id="substring"></li>
+        <li id="charat"></li>
+        <li id="indexof"></li>
+        <li id="includes"></li>
+    </ul>
+
+    <script>
+        function manipulateString() {
+            let originalString = document.getElementById("stringInput").value;
+
+     
+            let length = originalString.length;
+            document.getElementById("length").innerHTML = "<b>Length:</b> " + length + " characters.";
+
+            let upperCase = originalString.toUpperCase();
+            document.getElementById("uppercase").innerHTML = "<b>Uppercase:</b> " + upperCase + ".";
+
+            
+            let lowerCase = originalString.toLowerCase();
+            document.getElementById("lowercase").innerHTML = "<b>Lowercase:</b> " + lowerCase + ".";
+
+            
+            let subString = originalString.substring(0, 5);
+            document.getElementById("substring").innerHTML = "<b>Substring (0, 5):</b> " + subString + ".";
+
+            let charAtIndex = originalString.charAt(5);
+            document.getElementById("charat").innerHTML = "<b>Character at index 5:</b> " + charAtIndex + ".";
+
+            
+            let indexOfO = originalString.indexOf("o");
+            document.getElementById("indexof").innerHTML = "<b>First index of 'o':</b> " + indexOfO + ".";
+
+            
+            let includesWorld = originalString.includes("World");
+            document.getElementById("includes").innerHTML = "<b>Includes 'World':</b> " + includesWorld + ".";
+        }
+
+        
+        manipulateString();
+    </script>
+</body>
+</html>

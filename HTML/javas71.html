@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Document Object Properties and Methods</title>
-    <style>
-        body {
-            font-family: cursive;
-            
-        }
-        }
-        button {
-            margin-top: 10px;
-        }
-    </style>
+<title>Document Object Example</title>
+
+<script>
+function showDetails()
+{
+    // Document Properties
+    var t = document.title;
+    var u = document.URL;
+    var m = document.lastModified;
+
+    // Document Method
+    var name = document.getElementById("name").value;
+
+    // Displaying results
+    document.getElementById("output").innerHTML =
+    "Name: " + name + "<br>" +
+    "Title: " + t + "<br>" +
+    "URL: " + u + "<br>" +
+    "Last Modified: " + m;
+}
+</script>
+
 </head>
+
 <body>
 
-    <h1 id="title">Welcome to DOM Demo</h1>
-    <p id="description">This paragraph will be changed using Document Object methods.</p>
+<h2>Document Object Properties and Methods</h2>
 
-    <button onclick="changeContent()">Change Content</button>
-    <button onclick="showDocumentInfo()">Show Document Info</button>
+Enter your Name:
+<input type="text" id="name">
+<br><br>
 
-    <div id="output"></div>
+<button onclick="showDetails()">Click Here</button>
 
-    <script>
-        function changeContent() {
-            document.getElementById("description").innerHTML = "The content has been updated dynamically!";
-            document.getElementById("description").style.color = "midnightblue";
-            document.getElementById("description").style.fontWeight = "bold";
-        }
-        function showDocumentInfo() {
-            let info = `
-                <strong>Document Title:</strong> ${document.title} <br>
-                <strong>URL:</strong> ${document.URL} <br>
-                <strong>Last Modified:</strong> ${document.lastModified} <br>
-                <strong>Total Elements:</strong> ${document.getElementsByTagName('*').length}
-            `;
-            document.getElementById("output").innerHTML = info;
-        }
-    </script>
+<p id="output"></p>
 
 </body>
 </html>
