@@ -34,11 +34,10 @@
         try {
             let output = "";
 
-            // Math object properties
             output += `<strong>Math.PI:</strong> ${Math.PI}<br>`;
             output += `<strong>Math.E:</strong> ${Math.E}<br>`;
 
-            // Math methods
+            
             output += `<strong>Square root of 625:</strong> ${Math.sqrt(625)}<br>`;
             output += `<strong>5 raised to power 10:</strong> ${Math.pow(5, 10)}<br>`;
             output += `<strong>Random number (0 to 1):</strong> ${Math.random()}<br>`;
@@ -49,7 +48,6 @@
             output += `<strong>Max of (14,23,66):</strong> ${Math.max(14,23,66)}<br>`;
             output += `<strong>Min of (8,14,23):</strong> ${Math.min(8,14,23)}<br>`;
 
-            // Display results
             document.getElementById("output").innerHTML = output;
         } catch (error) {
             document.getElementById("output").innerHTML = `<span style="color:purple;">Error: ${error.message}</span>`;
