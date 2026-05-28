@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Background Image</title>
+
+<style>
+body{
+margin:0;
+height:150vh;
+font-family:cursive;
+position:relative;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) skewX(15deg);
+width:400px;
+height:250px;
+background-image:url("Castle.jpeg");
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+z-index:-1;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 align="center">Tangled Movie</h1>
+<p align="center">Rapunzel and Eugene</p>
+
+</body>
+</html>

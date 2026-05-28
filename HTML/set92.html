@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Input Methods</title>
+</head>
+
+<body>
+
+<h3>Different Ways of Taking Input</h3>
+
+<input type="text" id="name" placeholder="Enter your name">
+<button onclick="showInput()">Submit</button>
+
+<script>
+
+// input using prompt
+let age = prompt("Enter your age");
+
+// input using confirm
+let check = confirm("Are you sure?");
+
+// input using textbox
+function showInput(){
+let n = document.getElementById("name").value;
+alert("Name: " + n + "\nAge: " + age);
+}
+
+</script>
+
+</body>
+</html>

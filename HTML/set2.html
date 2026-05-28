@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let num = prompt("Enter number:");
+let sum = 0, temp = num;
+
+while(temp > 0){
+    let rem = temp % 10;
+    sum += rem*rem*rem;
+    temp = Math.floor(temp/10);
+}
+
+if(sum == num)
+    alert("Armstrong Number");
+else
+    alert("Not Armstrong Number");
+</script>
+</body>
+</html>

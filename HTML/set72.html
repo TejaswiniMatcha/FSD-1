@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Factorial and Fibonacci</title>
+</head>
+
+<body>
+
+<h3>Enter a Number</h3>
+<input type="text" id="num">
+
+<button onclick="fact()">Factorial</button>
+<button onclick="fib()">Fibonacci</button>
+
+<script>
+function fact(){
+let n=document.getElementById("num").value;
+let f=1;
+for(let i=1;i<=n;i++) f*=i;
+alert("Factorial = " + f);
+}
+
+function fib(){
+let n=document.getElementById("num").value;
+let a=0,b=1;
+for(let i=0;i<n;i++){
+document.write(a+" ");
+let c=a+b;
+a=b;
+b=c;
+}
+}
+</script>
+
+</body>
+</html>

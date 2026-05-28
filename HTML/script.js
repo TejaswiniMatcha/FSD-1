@@ -1,3 +1,3 @@
-function externalMessage() {
-    document.getElementById("external").innerHTML = "Hey guyss...get goingggggg";
+function externalJS(){
+ alert("External JS");
 }

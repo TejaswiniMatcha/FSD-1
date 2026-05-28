@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prime Number and Palindrome</title>
+</head>
+<body>
+
+<h2>Enter a number: </h2>
+<input id="num">
+
+<button onclick="prime()">PrimeNumbers</button>
+<button onclick="pal()">Palindrome</button>
+<button onclick="fac()">Factorial</button>
+<button onclick="fib()">Fibonacci</button>
+
+<script>
+
+function prime(){
+let n=document.getElementById("num").value;
+for(let i=2;i<=n;i++)
+{
+let f=1;
+for(let j=2;j<i;j++)
+{
+if(i%j==0)
+f=0;
+}
+if(f) document.write(i+" ");
+}
+}
+
+function pal(){
+let n=document.getElementById("num").value;
+let r=n.split("").reverse().join("");
+if(r==n)
+document.write("Palindrome");
+else
+document.write("Not a Palindrome");
+}
+</script>
+</body>
+</html>
